@@ -1,0 +1,47 @@
+header{
+	@extend .clear;
+	min-height: 260px;
+	height: auto;
+	padding-top: 2%;
+
+	@include phone{
+		min-height: 110px;
+	}
+
+	.logo{
+		padding-bottom: 7px;
+		max-height: 26px;
+
+		@include phone{
+			text-align: center;
+		}
+
+		img{
+			max-width: 100%;
+		}
+	}
+
+	.banner{
+		width: 914px;
+		height: 139px;
+		position: relative;
+		overflow: hidden;
+		@include phone{display: none;}
+		@include tablet{width:100%; max-width: 914px;}
+
+		.phone-number{
+			position: absolute;
+			right: 10px;
+			top: 80px;
+			background: $theme-blue;
+			color: $theme-yellow;
+			padding: 3px 20px;
+			font-weight: bold;
+			@include font-size(29);
+			line-height: 1;
+			@include border-radius(0.3em);
+
+		}
+	}
+}
+

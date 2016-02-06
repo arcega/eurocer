@@ -1,0 +1,55 @@
+* {
+  box-sizing: border-box;
+  font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font: 300 15px/1.6 $font-stack !important ;
+  background: #e7e7e7;
+  color: #999;
+  padding-top: 0;
+  padding-bottom: 0;
+  margin: 0;
+}
+
+.row{
+  @extend .clear;
+}
+
+.container{
+	width: 920px;
+	margin: 0 auto;
+  display: block;
+
+  @include phone{
+    width: 100%;
+    padding: 10px;
+  }
+  @include tablet{ width: $tablet-width; }
+}
+
+.container-wide{
+  width: 100%;
+}
+
+.theme-blue-background{
+  background: $theme-blue;
+}
+
+a:link,
+a:visited{
+  color: #fff;
+  text-decoration: none;
+  @include transition(color 0.4s .1s);
+
+  &:hover{
+    color: lighten($theme-blue, 20%);
+  }
+
+}
+
