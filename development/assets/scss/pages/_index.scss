@@ -46,23 +46,21 @@
 		.box{
 			@include border-radius(4px);
 			border: 1px solid #E1E1E1;
-			width: 220px;
+			width: 50%;
 			min-height: 400px;
 			position: relative;
 			background: #f6f6f6;
 			float: left;
 			padding: 10px;
-			margin: 3px;
-			@include phone{width: 143px;}
-			@include tablet{width: 180px;}
+			@include phone{width: 100%;}
+			// @include tablet{width: 180px;}
 			img{
 				@include border-radius(4px);
-				top: 0;
-				left: 0;
 				max-width: 188px;
 				@include phone{max-width: 120px;}
 				@include tablet{width: 157px;}
 			}
+			.text-center{text-align: center}
 		}
 
 		ul{
@@ -112,8 +110,7 @@
 		@extend .theme-blue-background;
 		color: lighten($theme-blue, 80%);
 		min-height: 470px;
-		// margin-top: 20px;
-	  padding: 5px 0;
+	    padding: 5px 0;
 
 		.fale-wrapper{
 			@extend .container;
@@ -126,11 +123,9 @@
 		}
 
 		.social-address{
-			float: left;
 			width: 420px;
-			margin-right: 10px;
+			margin: 0 auto;
 			p{@include font-size(12);}
-			@include phone{float: none;}
 			@include phone{width: 100%;}
 		}
 
